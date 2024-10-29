@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Investimentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Investimentos Registrados</h1>
+        <ul>
+            {% for investimento in investimentos %}
+                <li>
+                    Tipo: {{ investimento.tipo }}, Valor: {{ investimento.valor }}, Data: {{ investimento.data }}
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('index') }}">Voltar ao Menu Principal</a>
+    </div>
+</body>
+</html>

@@ -10,12 +10,22 @@
 <body>
     <div class="menu-container">
         <h1>Menu Principal</h1>
+        <!-- Formulário de Investimento com campos adicionais -->
         <form action="/investir" method="post">
+            <label for="tipo">Tipo de Investimento:</label>
+            <input type="text" id="tipo" name="tipo" required>
+            
+            <label for="valor">Valor do Investimento:</label>
+            <input type="number" id="valor" name="valor" required>
+            
             <button type="submit">Investir</button>
-        </form>
+        </form>        
+
         <form action="/resgatar" method="post">
             <button type="submit">Resgatar</button>
         </form>
+
+
         <form action="/sair" method="post">
             <button type="submit">Sair</button>
         </form>
