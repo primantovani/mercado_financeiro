@@ -13,13 +13,18 @@
         <!-- Formulário de Investimento com campos adicionais -->
         <form action="/investir" method="post">
             <label for="tipo">Tipo de Investimento:</label>
-            <input type="text" id="tipo" name="tipo" required>
+            <select id="tipo" name="tipo" required>
+                <option value="" disabled selected>Selecione um tipo</option>
+                <option value="CDB">CDB</option>
+                <option value="LCI">LCI</option>
+                <option value="LCA">LCA</option>
+            </select>
             
             <label for="valor">Valor do Investimento:</label>
             <input type="number" id="valor" name="valor" required>
             
             <button type="submit">Investir</button>
-        </form>        
+        </form>
 
         <form action="/resgatar" method="post">
             <button type="submit">Resgatar</button>
